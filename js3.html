@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div id="product-container"></div>
+    <script>
+        const products = [
+            { name: "Product 1", price: 100, stock: 10 },
+            { name: "Product 2", price: 200, stock: 5 },
+            { name: "Product 3", price: 150, stock: 0 },
+        ];
+
+        products.forEach(product => {
+            const productDiv = document.createElement("div");
+            productDiv.innerHTML = `
+                    <h2>${product.name}</h2>
+                    <p>Price: $${product.price}</p>
+                    <p>Stock: ${product.stock}</p>
+                `;
+            document.getElementById("product-container").appendChild(productDiv);
+            if (product.stock === 0) {
+                const stockMessage = document.createElement("p");
+                stockMessage.innerText = "สินค้าหมด";
+                stockMessage.style.color = "red";
+                productDiv.appendChild(stockMessage);
+            }
+        });
+    </script> -->
+    <!-- <div id="gallery">
+        <img src="" id="main-image" alt="">
+    </div>
+    <script>
+        const imageUrls = [
+            "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQix4Pc4ctGSrLnXZXOEMjgHJ7GWsciFoRgs77g_pDlrT4SbAd_cywS62P5rW8sf6Nj66Ej3jWW_orO6Cqd8iqNFH_Mk3gDszLgouDYfAs",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmZt7FOeJ9G9Jr-rqVvLoBN4-m05NC8WoT7TMJeYHGpXL1DeJl6BhxCHlmon5zKtTBfJA&usqp=CAU",
+            "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR7tdZWBu8Vq6XSM-Wh6FPKbuLSmXxHOamyIVZ71fo7Qw94-V46kZ5_BigXXdoz6U13vnEaeAChkSa2deTYRnQtdU5WkkWpe1rTBAuHQKo"
+        ];
+
+        const gallery = document.getElementById("gallery");
+        const mainImage = document.getElementById("main-image");
+
+        imageUrls.forEach((url, index) => {
+            const img = document.createElement("img");
+            img.src = url;
+            img.alt = `Image ${index + 1}`;
+            img.style.width = "100px";
+            img.style.cursor = "pointer";
+            img.addEventListener("click", () => {
+            mainImage.src = img.src;
+            mainImage.alt = img.alt;
+            });
+
+            gallery.appendChild(img);
+        });
+    </script> -->
+
+    <div id="user-profile">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTphH8Id_yRMpf3WQnd4DLyJjicy9vyD2lCGg&s" alt="">
+        <div id="guesst-message">
+            <h1>ดีจ้า</h1>
+
+        </div>    
+    </div>
+    <script>
+        const isLoggedIn = false;
+
+        const userProfile = document.getElementById("user-profile");
+        const guestMessage = document.getElementById("guesst-message");
+
+        if (isLoggedIn) {
+            userProfile.style.display = "block";
+            guestMessage.style.display = "none";
+        } else {
+            userProfile.style.display = "none";
+            guestMessage.style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

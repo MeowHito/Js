@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 id="dog">
+            Helloworld
+        </h1>
+    </div>
+    
+    <script>
+        document.write("<p>This i a dynamically added paragraph.</p>");
+        document.getElementById("dog").innerText = "Welcome to my page!";
+        document.getElementById("dog").style.color = "blue";
+
+        const titleElement = document.getElementById("dog");
+        titleElement.innnerText += "Welcome to my page!";
+    </script>
+</body>
+</html>
