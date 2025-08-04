@@ -31,8 +31,9 @@
         //     name:"Narongpol",
         //     score:50,
         //     isPassed:false,
-
         // }
+
+        // const filteredstudent =student.filter(student => student.score );
         // console.log(student);
 
         // if (student.score >= 50){
@@ -77,10 +78,54 @@
         //     sum += numbersArray[i];
         // }
         // console.log(`Sum of numbers: ${sum}`);
-        let hello = function()[
-            return "hello world"
-        ]
+        // ข้อ1
+        function calculateArea(width, height) {
+            return width * height;
+        }
+        let width = 5;
+        let height = 10;
+        let area = calculateArea(width, height);
+        console.log(`Area: ${area}`);
 
+        // ข้อ2
+        let products =[
+            "Laptop",
+            "Smartphone",
+            "Tablet",
+            "Headphones",
+            "Smartwatch"
+        ];
+        console.log("Original products:", products);
+        products.push("Camera");
+        console.log("After adding a new product:", products);
+        products.pop();
+        console.log("After removing the last product:", products);
+
+        // ข้อ3
+        let names = ['armzabanana','howtheylive in tokyo','c','d','e'];
+        
+        let longNames = names.filter(name => name.length > 5);
+        console.log("Names longer than 5 characters:", longNames);
+
+        // ข้อ4
+        let prices = [100, 150,160,170,180,190,200, 300, 400, 500,];
+        // ใช้ medhod map()เพื่อสร้างarray แปลงต่าทั้งหหมดให้เป็นราคาหลังหักส่วนลด 10%
+        let price10 = prices.map(price => price * 0.9);
+        console.log("original Prices:",prices);
+        console.log("Prices 10%:", price10);
+
+        // ข้อ5
+        function getAverageScore(score)
+        {
+            let total = 0;
+            for (let i = 0; i < score.length; i++) {
+                total += score[i];
+            }
+            return total / score.length;
+        }
+        let scores = [50,30,70,53,60,61,90,51,55,60,];
+        let averageScore = getAverageScore(scores)
+        console.log(`Average score: ${averageScore}`);        
     </script>
 </body>
 </html>
