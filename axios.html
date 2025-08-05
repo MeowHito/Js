@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Axios with HTML</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <h1>ตัวอย่างการใช้ Axios ใน HTML</h1>
+    <button onclick="fetchData()">ดึงข้อมูลผู้ใช้</button>
+    <button onclick="fetchDataPhotos()">ดึงข้อมูลรูปภาพ</button>
+    <ul id="user-list"></ul>
+    <div id="gallery">
+      
+    </div>
+    <script>
+      async function fetchDataPhotos() {
+        const userList = document.getElementById("gallery");
+
+        userList.innerHTML = "<li>กำลังโหลดรูปภาพ...</li>";
+
+        try {
+          // ใช้ axios.get() เพื่อส่งคำขอ GET
+
+          // axios จะพร้อมใช้งานเป็น global variable หลังจากเราแทรก script CDN
+
+          const response = await axios.get(
+            "https://jsonplaceholder.typicode.com/users"
+          );
+
+          const users = response.data;
+
+          // ล้างรายการเก่า
+
+          userList.innerHTML = "";
+
+          // แสดงข้อมูลผู้ใช้
+
+          users.forEach((user) => {
+            const img = document.createElement("img");
+            img.src = `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgkYT1bX5968AZdmBX9M_3ScWYFybdfQRsZg&s=${user.id}`;
+            img.alt = user.name;
+            img.style.width = "100px";
+            img.style.cursor = "pointer";
+            userList.appendChild(img);
+          });
+        } catch (error) {
+          console.error("เกิดข้อผิดพลาดในการดึงข้อมูล:", error.message);
+
+          userList.innerHTML = "<li>เกิดข้อผิดพลาดในการดึงข้อมูล</li>";
+        }
+      }
+    </script>
+  </body>
+</html>

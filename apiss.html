@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>hello world</h1>
+    </div>
+    
+    <script>
+        // console.log("Helloworld")
+
+        // let name =("Narongpol");
+        // let age = 19;
+        // let isStudent = false;
+
+        // const major = "Computer science";
+        // const start = 0;
+        // const end = 100;
+
+        // let birthDate = 2005;
+        // let currentYear = 2025;
+        // let ageInYears = currentYear - birthDate;
+        // console.log(`age:${ageInYears}`);
+
+        // // ข้อ2 
+        // const student= {
+        //     name:"Narongpol",
+        //     score:50,
+        //     isPassed:false,
+        // }
+
+        // const filteredstudent =student.filter(student => student.score );
+        // console.log(student);
+
+        // if (student.score >= 50){
+        //     student.isPassed = true;
+        // } else {
+        //     student.isPassed = false;
+        // }
+        // console.log(student.isPassed);
+
+        // // ข้อ3
+        // // เขียนลูป for เพื่อแสดงผลเฉพาะตัวเลขคู่ตั้งแต่ 0 ถึง 20 
+        // let numbers = [];
+        // for (let i = 0; i <= 20; i++) {
+        //     if (i % 2 === 0) {
+        //         numbers.push(i);
+        //     }
+        // console.log(numbers);
+        // }
+        
+
+        // // ข้อ4
+        // let weather = "hot";
+        // switch (weather) {
+        //     case "hot":
+        //         console.log("Wear light clothing");
+        //         break;
+        //     case "cold":
+        //         console.log("Wear warm clothing");
+        //         break;
+        //     case "rainy":
+        //         console.log("Carry an umbrella");
+        //         break;
+        //     default:
+        //         console.log("Check the weather forecast");
+        // }
+
+        // // ข้อ5
+        // let numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        // let sum = 0;
+
+        // for (let i = 0; i < numbersArray.length; i++) {
+        //     sum += numbersArray[i];
+        // }
+        // console.log(`Sum of numbers: ${sum}`);
+        // ข้อ1
+        function calculateArea(width, height) {
+            return width * height;
+        }
+        let width = 5;
+        let height = 10;
+        let area = calculateArea(width, height);
+        console.log(`Area: ${area}`);
+
+        // ข้อ2
+        let products =[
+            "Laptop",
+            "Smartphone",
+            "Tablet",
+            "Headphones",
+            "Smartwatch"
+        ];
+        console.log("Original products:", products);
+        products.push("Camera");
+        console.log("After adding a new product:", products);
+        products.pop();
+        console.log("After removing the last product:", products);
+
+        // ข้อ3
+        let names = ['armzabanana','howtheylive in tokyo','c','d','e'];
+        
+        let longNames = names.filter(name => name.length > 5);
+        console.log("Names longer than 5 characters:", longNames);
+
+        // ข้อ4
+        let prices = [100, 150,160,170,180,190,200, 300, 400, 500,];
+        // ใช้ medhod map()เพื่อสร้างarray แปลงต่าทั้งหหมดให้เป็นราคาหลังหักส่วนลด 10%
+        let price10 = prices.map(price => price * 0.9);
+        console.log("original Prices:",prices);
+        console.log("Prices 10%:", price10);
+
+        // ข้อ5
+        function getAverageScore(score)
+        {
+            let total = 0;
+            for (let i = 0; i < score.length; i++) {
+                total += score[i];
+            }
+            return total / score.length;
+        }
+        let scores = [50,30,70,53,60,61,90,51,55,60,];
+        let averageScore = getAverageScore(scores)
+        console.log(`Average score: ${averageScore}`);        
+    </script>
+</body>
+</html>
